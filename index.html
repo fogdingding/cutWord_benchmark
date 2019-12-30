@@ -11,10 +11,88 @@
     integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <link rel="stylesheet" href="index2.css">
 
-  <title>Hello, world!</title>
+  <title>蓋世比字</title>
 </head>
 
 <body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">蓋世比字</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+  <div>
+    <h3>
+      選擇相關資料
+    </h3>
+  </div>
+  <form>
+    <div class="from-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">請輸入文章</span>
+        </div>
+        <textarea class="form-control" aria-label="With textarea"></textarea>
+      </div>
+    </div>
+    <div class="from-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">選比較對象
+          </span>
+          <div class="custom-control custom-checkbox custom-control-inline">
+            <input type="checkbox" class="custom-control-input" id="defaultInline1">
+            <label class="custom-control-label" for="defaultInline1">1</label>
+          </div>
+          <div class="custom-control custom-checkbox custom-control-inline">
+            <input type="checkbox" class="custom-control-input" id="defaultInline2">
+            <label class="custom-control-label" for="defaultInline2">2</label>
+          </div>
+          <div class="custom-control custom-checkbox custom-control-inline">
+            <input type="checkbox" class="custom-control-input" id="defaultInline3">
+            <label class="custom-control-label" for="defaultInline3">3</label>
+          </div>
+          <div class="custom-control custom-checkbox custom-control-inline">
+            <input type="checkbox" class="custom-control-input" id="defaultInline4">
+            <label class="custom-control-label" for="defaultInline4">4</label>
+          </div>
+          <div class="custom-control custom-checkbox custom-control-inline">
+            <input type="checkbox" class="custom-control-input" id="defaultInline5">
+            <label class="custom-control-label" for="defaultInline5">5</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="from-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">請選擇源本</span>
+        </div>
+        <div class="btn-group">
+          <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            源本
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">gais</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">1</a>
+            <a class="dropdown-item" href="#">2</a>
+            <a class="dropdown-item" href="#">3</a>
+            <a class="dropdown-item" href="#">4</a>
+            <a class="dropdown-item" href="#">5</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="from-group">
+      <div>
+        <button type="button" class="btn btn-dark">查詢</button>
+      </div>
+    </div>
+  </form>
+
   <div id="wrapper">
     <h3>
       Demo of jQuery.PrettyTextDiff
