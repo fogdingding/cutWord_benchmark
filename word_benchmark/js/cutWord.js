@@ -72,7 +72,7 @@ function get_cutWord(type,article) {
         dataType: "json",
         async: false,
         success:function(data){
-            // console.log(type + ":" + data.text);
+            console.log(type + ":" + data.text);
             cut_wrod = data.text;
         },
         error: function(){
