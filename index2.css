@@ -1,0 +1,16 @@
+ins {
+    background-color:  #ffc6c6;
+    text-decoration: none;
+}
+
+del {
+    display:none;
+}
+
+div, table, h3, input, label {
+    margin: 10px;
+}
+
+table th {
+    width: 30%;
+}
