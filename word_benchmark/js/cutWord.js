@@ -91,7 +91,9 @@ async function set(originalTxt, modifiedTxt) {
     }
     require.config({ paths: { 'vs': '../node_modules/monaco-editor/min/vs' } });
     await require(['vs/editor/editor.main'], function () {
-        let diffEditor = monaco.editor.createDiffEditor(document.getElementById('container'));
+        let diffEditor = monaco.editor.createDiffEditor(document.getElementById('container'),{
+            fontSize: 20
+        });
         diffEditor.setModel({
             original: monaco.editor.createModel(originalTxt, 'text'),
             modified: monaco.editor.createModel(modifiedTxt, 'text'),
