@@ -17,6 +17,7 @@ $("#search").click(async() => {
     await cutWordData.forEach(async element => {
         if(element.name == "article"){
             wordData = element.value;
+            console.log(wordData);
         }
         if(element.name == "original"){
             original = element.value;
@@ -85,14 +86,34 @@ function get_cutWord(type,article) {
 async function set(originalTxt, modifiedTxt) {
     if(originalTxt == ''){
         originalTxt = "無任何產出";
+    } else {
+        originalTxt = originalTxt.replace(/(\ )/g, '\n');
     }
     if(modifiedTxt == ''){
         modifiedTxt = "無任何產出";
+    } else {
+        modifiedTxt = modifiedTxt.replace(/(\ )/g, '\n');
     }
     require.config({ paths: { 'vs': '../node_modules/monaco-editor/min/vs' } });
+    
     await require(['vs/editor/editor.main'], function () {
+
+        monaco.editor.defineTheme('myTheme', {
+            base: 'vs',
+            inherit: true,
+            rules: [{ background: 'EDF9FA' }],
+            colors: {
+                'diffEditor.insertedTextBackground': '#9accff', // Background color for text that got inserted.
+                'diffEditor.removedTextBackground': '#9accff', // Background color for text that got removed.
+                'diffEditor.insertedTextBorder': '#9accff', // Outline color for the text that got inserted.
+                'diffEditor.removedTextBorder': '#9accff' // Outline color for text that got removed.
+            }
+        });
+        monaco.editor.setTheme('myTheme');
+
         let diffEditor = monaco.editor.createDiffEditor(document.getElementById('container'),{
-            fontSize: 20
+            fontSize: 20,
+            renderLineHighlight: "none"
         });
         diffEditor.setModel({
             original: monaco.editor.createModel(originalTxt, 'text'),
