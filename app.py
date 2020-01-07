@@ -24,5 +24,5 @@ def hello():
     return render_template('index.html')
 
 if __name__ == "__main__":
-    # app.run(host="localhost",port=5006, ssl_context=('/etc/letsencrypt/live/gais.ccu.edu.tw/fullchain.pem','/etc/letsencrypt/live/gais.ccu.edu.tw/privkey.pem'))
+    # app.run(host="140.123.101.150",port=5006, ssl_context=('/etc/letsencrypt/live/gais.ccu.edu.tw/fullchain.pem','/etc/letsencrypt/live/gais.ccu.edu.tw/privkey.pem'))
     app.run(host="localhost",port=5006)
