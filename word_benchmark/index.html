@@ -21,18 +21,6 @@
 			<div class="p-4 pt-5">
 				<a href="#" class="img logo rounded-circle mb-5" style="background-image: url(images/logo.jpg);"></a>
 				<ul class="list-unstyled components mb-5">
-					<li class="active">
-						<a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false"
-							class="dropdown-toggle">請輸入文章</a>
-						<ul class="collapse list-unstyled" id="homeSubmenu">
-							<li>
-								<form>
-									<textarea name="article" value="" class="form-control" style="resize:vertical;"
-										aria-label="With textarea"></textarea>
-								</form>
-							</li>
-						</ul>
-					</li>
 					<li>
 						<form>
 							<a>請選擇來源
@@ -119,8 +107,15 @@
 					</div>
 				</div>
 			</nav>
+			<!-- <div id="output" style="height:29%;font-family:'Courier New', monospace;">Last 3 events:<br/></div> -->
 			<h2 class="mb-4">
-				benchmark #01
+				請輸入比較文章
+				<div class="">
+					<form>
+						<textarea name="article" value="" class="form-control" style="resize:vertical;"
+							aria-label="With textarea"></textarea>
+					</form>
+				</div>
 				<div class="spinner-border text-primary" role="status" style="display:none;">
 					<span class="sr-only">Loading...</span>
 				</div>
@@ -134,8 +129,8 @@
 	<script src="js/popper.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/sidebar.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.18.1/min/vs/loader.js"></script>
 	<script src="js/cutWord.js"></script>
-	<script src="../node_modules/monaco-editor/min/vs/loader.js"></script>
 </body>
 
 </html>

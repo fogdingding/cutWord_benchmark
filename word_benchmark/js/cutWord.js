@@ -94,8 +94,8 @@ async function set(originalTxt, modifiedTxt) {
     } else {
         modifiedTxt = modifiedTxt.replace(/(\ )+/g, '\n');
     }
-    require.config({ paths: { 'vs': '../node_modules/monaco-editor/min/vs' } });
-    
+
+    require.config({ paths: { 'vs': 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.18.1/min/vs' }});
     await require(['vs/editor/editor.main'], function () {
 
         monaco.editor.defineTheme('myTheme', {
@@ -113,6 +113,7 @@ async function set(originalTxt, modifiedTxt) {
 
         let diffEditor = monaco.editor.createDiffEditor(document.getElementById('container'),{
             fontSize: 20,
+            language: "text",
             renderLineHighlight: "none"
         });
         diffEditor.setModel({
