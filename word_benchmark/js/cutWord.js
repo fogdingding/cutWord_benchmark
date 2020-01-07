@@ -87,12 +87,12 @@ async function set(originalTxt, modifiedTxt) {
     if(originalTxt == ''){
         originalTxt = "無任何產出";
     } else {
-        originalTxt = originalTxt.replace(/(\ )/g, '\n');
+        originalTxt = originalTxt.replace(/(\ )+/g, '\n');
     }
     if(modifiedTxt == ''){
         modifiedTxt = "無任何產出";
     } else {
-        modifiedTxt = modifiedTxt.replace(/(\ )/g, '\n');
+        modifiedTxt = modifiedTxt.replace(/(\ )+/g, '\n');
     }
     require.config({ paths: { 'vs': '../node_modules/monaco-editor/min/vs' } });
     
